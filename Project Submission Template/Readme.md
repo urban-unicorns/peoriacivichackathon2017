@@ -1,11 +1,8 @@
-# Peoria Civic Hackathon Submission Example
-
-This is a sample submission for the Peoria Civic Hackathon. This is just a sample of what your repo can look like when you submit it
-to us as part of the final process for judging the hackathon.
-
 ## Description
 
-A brief introduction to your project. It should include the motivation behind the project and also how it addresses the challenge statement.
+The primary motivation of Build Peoria is to connect citizens to their built environment for the purposes of transparent information dissemination, make traversing roads, sidewalks, and bike trails in the City come with ease, voice their ‘gripes,’ and help City staff prioritize possible future infrastructure improvements.
+
+This application is developed by the Urban Unicorn LLC.
 
 ## Screenshots
 
@@ -13,12 +10,28 @@ If possible, provide a couple screenshots of your project. You can use a tool li
 
 ## Data/APIs used
 
-If relevant, provide a list of Data and APIs you used in this project.
+We only used a subset of the provided data just to keep things simple. However, we did transform the data and merge them into one set in `website\db.sqlite3` inside of the table 'peoria_project'
+We merged and transformed the data into a table that has latitude, longitude, type, description, and filename.
+
+Type is construction type:
+
+    PV = Pavement projects
+    BK = bike path projects
+    TC = trashcans
+    RA = Ramps
+    SW = sidewalks
+
+Latitude and longitude are the centroids of the project if they are not already point values
+    
+Filename is the geojson filename of the source data.
+
+id is just the primary key.
 
 ## Team Members
 
-+ [name-of-a-team-member](URL to this member's github account)
-+ [name-of-a-team-member](URL to this member's github account)
-+ [name-of-a-team-member](URL to this member's github account)
-+ [name-of-a-team-member](URL to this member's github account)
-+ [name-of-a-team-member](URL to this member's github account)
++ [Ry Whittington](https://github.com/orgs/urban-unicorns/people/rwhitt2049)
++ [Austin Aldag](https://github.com/orgs/urban-unicorns/people/ama296)
++ [Ryan Rigato](https://github.com/orgs/urban-unicorns/people/rrigato)
++ [Balmes Tejeda](https://github.com/orgs/urban-unicorns/people/BalmesTejeda)
++ [Nghi Nguyen](https://github.com/orgs/urban-unicorns/people/mnghinguyen)
++ [Chris Nebergall](https://github.com/orgs/urban-unicorns/people/topher96)
