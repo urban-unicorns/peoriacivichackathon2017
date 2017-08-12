@@ -6,7 +6,8 @@ This application is developed by the Urban Unicorn LLC.
 
 ## Screenshots
 
-If possible, provide a couple screenshots of your project. You can use a tool like https://monosnap.com/welcome or https://droplr.com to take a screenshot. Animated gifs are also welcome.
+![Main page](https://github.com/urban-unicorns/peoriacivichackathon2017/blob/master/main_page.png)
+![Map](https://github.com/urban-unicorns/peoriacivichackathon2017/blob/master/map.png)
 
 ## Data/APIs used
 
