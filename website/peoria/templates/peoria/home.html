@@ -1,0 +1,57 @@
+{% extends 'peoria/base.html' %}
+
+
+{% block title %}
+Peoria Home
+{% endblock %}
+
+
+
+
+
+{% block body %}
+    <h1>Peoria HOME 0.1</h1>
+    Hello, welcome to Peoria website!!!</br>
+    Go Urban Unicorns!!!
+
+
+    <h2>
+    <a href = "{%  url 'peoria:gripe-list' %}">Submit your gripe!!!</a>
+    </h2>
+
+
+
+    <iframe width="600" height="450" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJrXlYU1xZCogR24B9azL0-8o&key=AIzaSyAYEjsF90Cthd2KilWY9lS96vXC3I1M7wg"
+            allowfullscreen></iframe>
+
+
+
+<div id="map"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: 40.7, lng: -89.6};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYEjsF90Cthd2KilWY9lS96vXC3I1M7wg&callback=initMap">
+    </script>
+
+
+
+
+
+
+{% endblock %}

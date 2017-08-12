@@ -1,0 +1,59 @@
+{% extends 'peoria/base.html' %}
+{%  block body %}
+
+    <h1>Gripe List</h1>
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+        <a href="{% url 'peoria:gripe-create' %}">
+        <span class="glyphicon glyphicon-plus"></span>Create New Gripe
+    </a>
+
+</div>
+
+
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Upvote</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Address</th>
+                <th>Votes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for gripe in gripe_list %}
+                <tr>
+                    <td>
+<a href = "{%  url 'peoria:gripe-upvote' gripe.pk %}">Upvote!</a>
+
+
+                    </td>
+                    <td><a href="{% url 'peoria:gripe-detail' gripe.id %}">{{ gripe.name }}</td>
+                    <td>{{ gripe.description }}</td>
+                    <td>{{ gripe.address }}</td>
+                    <td>{{ gripe.votes }}</td>
+
+                </tr>
+
+
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+
+
+
+
+{% endblock %}
